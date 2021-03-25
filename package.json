@@ -5,7 +5,24 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "type-check": "tsc --pretty --noEmit --project cypress/tsconfig.json",
+    "format": "prettier --write .",
+    "lint": "eslint src --ext ts --ext tsx",
+    "test": "jest",
+    "test-all": "yarn lint && yarn type-check && yarn test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run type-check"
+    }
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
   },
   "dependencies": {
     "next": "10.0.9",
@@ -17,9 +34,23 @@
     "yarn": "1.22.10"
   },
   "devDependencies": {
+    "@testing-library/react": "11.2.5",
+    "@types/jest": "26.0.21",
     "@types/node": "14.14.35",
     "@types/react": "17.0.3",
     "@types/react-dom": "17.0.3",
+    "@typescript-eslint/eslint-plugin": "4.19.0",
+    "@typescript-eslint/parser": "4.19.0",
+    "babel-jest": "26.6.3",
+    "eslint": "7.22.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-react": "7.23.1",
+    "husky": "5.2.0",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "26.6.3",
+    "jest-watch-typeahead": "0.6.1",
+    "lint-staged": "10.5.4",
+    "prettier": "2.2.1",
     "typescript": "4.2.3"
   }
 }
