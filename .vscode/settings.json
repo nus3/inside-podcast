@@ -3,5 +3,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "css.validate": false,
+  "css.validate": false
 }
