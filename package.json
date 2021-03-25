@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc --pretty --noEmit --project cypress/tsconfig.json",
+    "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
     "lint": "eslint src --ext ts --ext tsx",
     "test": "jest",
