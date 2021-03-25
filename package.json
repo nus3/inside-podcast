@@ -10,7 +10,10 @@
     "format": "prettier --write .",
     "lint": "eslint src --ext ts --ext tsx",
     "test": "jest",
-    "test-all": "yarn lint && yarn type-check && yarn test"
+    "test-all": "yarn lint && yarn type-check && yarn test",
+    "scaffold": "ts-node --project scripts/tsconfig.json scripts/component_scaffold/index.ts --",
+    "storybook": "start-storybook -p 9009 -s ./public",
+    "build-storybook": "build-storybook -s ./public"
   },
   "lint-staged": {
     "*.@(ts|tsx)": [
@@ -29,9 +32,10 @@
     "yarn": "1.22.10"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "6.1.21",
-    "@storybook/addon-links": "6.1.21",
-    "@storybook/react": "6.1.21",
+    "@storybook/addon-essentials": "6.2.0-alpha.23",
+    "@storybook/addon-links": "6.2.0-alpha.23",
+    "@storybook/addon-postcss": "2.0.0",
+    "@storybook/react": "6.2.0-alpha.23",
     "@testing-library/react": "11.2.5",
     "@types/classnames": "2.2.11",
     "@types/jest": "26.0.21",

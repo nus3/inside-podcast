@@ -1,4 +1,4 @@
-import style from '../src/styles/index.css'
+import style from '../src/styles/globals.css'
 import router from './newRouterMock'
 
 export const parameters = {

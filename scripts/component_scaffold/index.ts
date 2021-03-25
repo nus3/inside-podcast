@@ -59,7 +59,7 @@ const main = () => {
       `${path}/index.tsx`,
       createComponentTemplate(componentName.value),
     )
-    writeFileSync(`${path}/styles.ts`, createStyleTemplate())
+    writeFileSync(`${path}/index.module.css`, createStyleTemplate())
     writeFileSync(
       `${path}/index.stories.tsx`,
       createStorybookTemplate(pathName.value, componentName.value),
