@@ -38,6 +38,10 @@
         "allow": ["warn", "error"]
       }
     ],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/no-unresolved": "off",
+    "sort-imports": "off",
     "react/self-closing-comp": [
       "error",
       {
