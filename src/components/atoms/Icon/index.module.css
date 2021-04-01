@@ -1,0 +1,9 @@
+.icon {
+  @apply inline-block;
+  &:focus {
+    @apply outline-none;
+  }
+  &:hover {
+    @apply outline-none;
+  }
+}

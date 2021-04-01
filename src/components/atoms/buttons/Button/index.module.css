@@ -1,0 +1,85 @@
+.basic {
+  @apply font-bold border-0 rounded-lg cursor-pointer inline-block leading-none;
+
+  &:focus {
+    @apply outline-none;
+  }
+  &:focus-visible {
+    @apply outline-none shadow-focus;
+  }
+}
+
+.label-wrap {
+  @apply inline-flex items-center gap-2;
+}
+
+.color {
+  &-primary {
+    @apply bg-primary;
+
+    &.outlined {
+      @apply border-primary;
+    }
+
+    &:hover {
+      @apply bg-primary-hover;
+    }
+  }
+
+  &-secondary {
+    @apply bg-basic;
+
+    &.outlined {
+      @apply border-basic;
+    }
+
+    &:hover {
+      @apply bg-basic-hover;
+    }
+  }
+
+  &-dark {
+    @apply bg-black-cancel;
+
+    &.outlined {
+      @apply border-black-cancel;
+    }
+
+    &:hover {
+      @apply bg-black-cancel-hover;
+    }
+  }
+}
+
+.round {
+  @apply rounded-full;
+}
+
+.outlined {
+  @apply border-2 bg-white;
+
+  &:hover {
+    @apply bg-gray-bg;
+  }
+}
+
+.disabled {
+  @apply bg-gray-200 cursor-not-allowed;
+  &:hover {
+    @apply bg-gray-200;
+  }
+}
+
+.size {
+  &-sm {
+    @apply px-4 py-1;
+  }
+
+  &-md {
+    @apply px-6 py-2;
+  }
+
+  &-lg {
+    @apply px-8 py-2;
+  }
+}
