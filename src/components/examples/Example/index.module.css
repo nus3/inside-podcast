@@ -1,8 +1,122 @@
-.text {
-  color: orange;
-  font-weight: bold;
+.wrap {
+  @apply p-5 flex flex-col gap-10;
 }
 
-.apply {
-  @apply text-blue-300 font-bold;
+.contents-wrap {
+  @apply flex flex-col;
+}
+
+.card-wrap {
+  @apply flex gap-8 mt-3;
+}
+
+.card {
+  @apply flex flex-col gap-2 items-center w-48 h-72 shadow rounded-xl p-5 bg-blue-200;
+}
+
+.content-wrap {
+  @apply flex gap-2;
+}
+
+.content1 {
+  transition: height 0.2s;
+  @apply bg-green-success rounded-sm p-2 w-20 h-10;
+
+  &.high {
+    @apply h-48;
+  }
+}
+
+.content2 {
+  transition: width 0.2s;
+  @apply bg-green-success rounded-sm p-2 w-20 h-10;
+
+  &.long {
+    @apply w-48;
+  }
+}
+
+.content3 {
+  @apply bg-green-success rounded-sm p-2 w-20 h-10;
+
+  &.move-down {
+    animation-name: moveDown;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  }
+}
+
+.content4 {
+  @apply bg-green-success rounded-sm p-2 w-20 h-10;
+
+  &.rotate {
+    animation-name: rolling;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  }
+}
+
+.content5 {
+  @apply bg-green-success rounded-sm p-2 w-20 h-10;
+
+  &.swing {
+    animation-name: swing;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+}
+
+/*---------- animation ----------*/
+@keyframes moveDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(200px);
+  }
+}
+
+@keyframes rolling {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(10deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
