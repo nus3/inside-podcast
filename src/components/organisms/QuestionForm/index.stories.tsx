@@ -1,7 +1,7 @@
 import {
   QuestionForm,
   QuestionFormValues,
-} from 'components/organisms/forms/QuestionForm'
+} from 'components/organisms/QuestionForm'
 
 export default {
   title: 'organisms/forms/QuestionForm',
