@@ -1,5 +1,5 @@
-import { QuestionLayout } from 'components/organisms/layouts/QuestionLayout'
-import { Question } from 'components/organisms/question/Question'
+import { Question } from 'components/organisms/Question'
+import { QuestionLayout } from 'components/organisms/QuestionLayout'
 
 export default {
   title: 'organisms/layouts/QuestionLayout',
